@@ -15,26 +15,6 @@ Se construyó un repositorio sintético de cinco tablas interrelacionadas (contr
 
 El núcleo experimental consiste en un análisis comparativo entre **Isolation Forest** (no supervisado, en tres configuraciones iterativas) y **XGBoost con SMOTE** (supervisado), evaluando sus fortalezas, limitaciones y complementariedad.
 
-## Estructura del repositorio
-
-```
-├── README.md
-├── notebook.ipynb                     # Jupyter Notebook con todo el pipeline
-├── data/
-│   ├── counterparty.csv               # 100.000 registros — GLEIF Golden Copy (filtrado)
-│   ├── client.csv                     # 2.000 registros — Dataset KYC sintético
-│   ├── instrument.csv                 # 500 registros — Generado sintéticamente
-│   ├── contract.csv                   # 5.209 registros — Generado sintéticamente
-│   ├── transaction.csv                # 50.000 registros — Dataset KYC sintético
-│   └── model_dataset.csv              # Dataset unificado con 38 features (listo para modelado)
-└── results/
-    ├── isolation_forest_results.png           # Iteración 1: modelo base (con leakage)
-    ├── isolation_forest_optimized.png         # Iteración 2: sin leakage
-    ├── isolation_forest_semisupervised.png    # Iteración 3: semi-supervisado
-    └── comparativa_final.png                  # IF vs XGBoost+SMOTE
-```
-
-> **Nota:** Si la estructura de tu repositorio difiere, ajusta las rutas de los ficheros en el notebook.
 
 ## Modelo de datos
 
